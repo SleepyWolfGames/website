@@ -1,0 +1,147 @@
+
+@font-face {
+  font-family: Nunito;
+  /*src: url('https://sadhost.neocities.org/fonts/Nunito-Regular.ttf');*/
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  background-color: #334;
+  /* you can delete the line below if you'd prefer to not use an image */
+  background-size: 65px;
+  font-size: 16px;
+  color: #fff0e0;
+}
+
+
+#container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#container a {
+  color: #F33A6A;
+  font-weight: bold;
+}
+
+#container strong {
+  color: #ffd700;
+  font-weight: 700;
+  font-style: italic;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#header {
+  width: 100%;
+  background-color: #5e4e8c;
+  height: 150px;
+  /* background-image: var(--header-image); */
+  background-size: 100%;
+}
+
+#navbar-sticky {
+  position: sticky;
+  top: 0;
+}
+
+#navbar {
+  height: 64px;
+  background-color: #ffb700;
+  font-size: 32px;
+  width: 100%;
+}
+
+#navbar ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  justify-content: space-evenly;
+}
+
+#navbar li {
+  padding-top: 10px;
+}
+
+#navbar li a {
+  color: #fff0e0;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#navbar li a:hover {
+  color: #334;
+}
+
+#flex {
+  display: flex;
+  background-color: #ffb700;
+}
+
+aside {
+  color: #334;
+  background-color: #ffb700;
+  width: 200px;
+  padding: 20px;
+  
+  border-right: 25px solid #ffb700;
+}
+
+
+main {
+  background-color: #fff0e0;
+  color: #334;
+  flex: 1;
+  padding: 20px;
+  order: 2;
+  
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+footer {
+  background-color: #ffb700;
+  width: 100%;
+  height: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 24px;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+
+/* BELOW THIS POINT IS MEDIA QUERY */
+
+/* so you wanna change the width of your page? 
+** by default, the container width is 900px.
+** in order to keep things responsive, take your new height,
+** and then subtrack it by 100. use this new number as the 
+** "max-width" value below
+*/
+
+@media only screen and (max-width: 800px) {
+  #flex {
+    flex-wrap: wrap;
+  }
+  
+  aside {
+    width: 100%;
+  }
+  
+  #leftSidebar {
+    order: 1;
+  }
+  
+  main {
+    order: 2;
+  }
+  
+  #navbar ul {
+    flex-wrap: wrap;
+}
+}
